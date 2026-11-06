@@ -1,0 +1,463 @@
+- Arquivo de configuração encontrado!
+ - Arquivos header necessários do professor existem na pasta Includes
+ - Arquivos objetos necessários do professor existem na pasta Gabarito-obj.
+
+#######################################
+ALUNO: Manuelly
+#######################################
+
+CRIANDO O DIRETÓRIO DE RESULTADO PARA Manuelly:
+ - Diretório Resultados/Manuelly criado com sucesso!
+ - Diretório Resultados/Manuelly/main criado com sucesso!
+ - Diretório Resultados/Manuelly/completo criado com sucesso!
+ - Diretório Resultados/Manuelly/jogador criado com sucesso!
+ - Diretório Resultados/Manuelly/mapa criado com sucesso!
+ - Diretório Resultados/Manuelly/celula criado com sucesso!
+ - Diretório Resultados/Manuelly/acao_monstro criado com sucesso!
+ - Arquivos criados: ok!
+
+CHECKANDO OS ARQUIVOS DO ALUNO:
+ - Arquivo esperado 'Respostas/Manuelly/acao_monstro.c' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/acao_monstro.h' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/celula.c' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/celula.h' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/jogador.c' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/jogador.h' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/main.c' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/mapa.c' encontrado!
+ - Arquivo esperado 'Respostas/Manuelly/mapa.h' encontrado!
+ - Arquivos esperados enviados: Ok!
+
+COPIANDO OS ARQUIVOS PARA A PASTA DE RESULTADO DO ALUNO:
+ - Pasta main:
+ - Copiando os Casos de teste para a pasta Resultados/Manuelly/main
+ - Copiando os Includes/acao_monstro.h Includes/celula.h Includes/jogador.h Includes/mapa.h do professor para a pasta Resultados/Manuelly/main
+ - Copiando os Includes/*.o do professor para a pasta Resultados/Manuelly/main
+ - Removendo o main.o do professor da pasta Resultados/Manuelly/main
+ - Copiando o Respostas/Manuelly/main.c do aluno para a pasta Resultados/Manuelly/main
+ - Pasta completo:
+ - Copiando os Casos de teste para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/acao_monstro.c do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/acao_monstro.h do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/celula.c do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/celula.h do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/jogador.c do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/jogador.h do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/main.c do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/mapa.c do aluno para a pasta Resultados/Manuelly/completo
+ - Copiando os Respostas/Manuelly/mapa.h do aluno para a pasta Resultados/Manuelly/completo
+ - Pasta jogador:
+ - Copiando os Casos de teste para a pasta Resultados/Manuelly/jogador
+ - Copiando os Includes/acao_monstro.h Includes/celula.h Includes/jogador.h Includes/mapa.h do professor para a pasta Resultados/Manuelly/jogador
+ - Copiando os Includes/*.o do professor para a pasta Resultados/Manuelly/jogador
+ - Removendo o jogador.o do professor da pasta Resultados/Manuelly/jogador
+ - Copiando o Respostas/Manuelly/jogador.c do aluno para a pasta Resultados/Manuelly/jogador
+ - Pasta mapa:
+ - Copiando os Casos de teste para a pasta Resultados/Manuelly/mapa
+ - Copiando os Includes/acao_monstro.h Includes/celula.h Includes/jogador.h Includes/mapa.h do professor para a pasta Resultados/Manuelly/mapa
+ - Copiando os Includes/*.o do professor para a pasta Resultados/Manuelly/mapa
+ - Removendo o mapa.o do professor da pasta Resultados/Manuelly/mapa
+ - Copiando o Respostas/Manuelly/mapa.c do aluno para a pasta Resultados/Manuelly/mapa
+ - Pasta celula:
+ - Copiando os Casos de teste para a pasta Resultados/Manuelly/celula
+ - Copiando os Includes/acao_monstro.h Includes/celula.h Includes/jogador.h Includes/mapa.h do professor para a pasta Resultados/Manuelly/celula
+ - Copiando os Includes/*.o do professor para a pasta Resultados/Manuelly/celula
+ - Removendo o celula.o do professor da pasta Resultados/Manuelly/celula
+ - Copiando o Respostas/Manuelly/celula.c do aluno para a pasta Resultados/Manuelly/celula
+ - Pasta acao_monstro:
+ - Copiando os Casos de teste para a pasta Resultados/Manuelly/acao_monstro
+ - Copiando os Includes/acao_monstro.h Includes/celula.h Includes/jogador.h Includes/mapa.h do professor para a pasta Resultados/Manuelly/acao_monstro
+ - Copiando os Includes/*.o do professor para a pasta Resultados/Manuelly/acao_monstro
+ - Removendo o acao_monstro.o do professor da pasta Resultados/Manuelly/acao_monstro
+ - Copiando o Respostas/Manuelly/acao_monstro.c do aluno para a pasta Resultados/Manuelly/acao_monstro
+ - Copiando Arquivos Extras do Aluno:
+ - Arquivos copiados: ok!
+
+COMPILANDO OS ARQUIVOS NA PASTA DE RESULTADO DO ALUNO:
+ - Compilação dos arquivos do aluno na pasta main ok!
+ - Arquivo de output gerado: Resultados/Manuelly/main/result_compilation.txt
+ - Compilação dos arquivos do aluno na pasta completo ok!
+ - Arquivo de output gerado: Resultados/Manuelly/completo/result_compilation.txt
+ - Compilação dos arquivos do aluno na pasta jogador ok!
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/result_compilation.txt
+ - Compilação dos arquivos do aluno na pasta mapa ok!
+ - Arquivo de output gerado: Resultados/Manuelly/mapa/result_compilation.txt
+ - Compilação dos arquivos do aluno na pasta celula ok!
+ - Arquivo de output gerado: Resultados/Manuelly/celula/result_compilation.txt
+ - Compilação dos arquivos do aluno na pasta acao_monstro ok!
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/result_compilation.txt
+ - Arquivos Compilados: ok!
+
+LINKANDO OS ARQUIVOS COMPILADOS:
+ - Pasta main:
+ - Gerando o binário prog linkando com o(s) arquivo(s) main/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Manuelly/main/result_linking.txt
+ - Pasta completo:
+ - Gerando o binário prog linkando com o(s) arquivo(s) completo/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Manuelly/completo/result_linking.txt
+ - Pasta jogador:
+ - Gerando o binário prog linkando com o(s) arquivo(s) jogador/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/result_linking.txt
+ - Pasta mapa:
+ - Gerando o binário prog linkando com o(s) arquivo(s) mapa/*.o
+ - Arquivos Linkados: Erro! Binário prog não gerado.
+ - Arquivo de output gerado: Resultados/Manuelly/mapa/result_linking.txt
+ - Pasta celula:
+ - Gerando o binário prog linkando com o(s) arquivo(s) celula/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Manuelly/celula/result_linking.txt
+ - Pasta acao_monstro:
+ - Gerando o binário prog linkando com o(s) arquivo(s) acao_monstro/*.o
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/result_linking.txt
+ - Arquivos Linkados: Erro! 1 arquivos com erros de linkagem.
+
+EXECUTANDO O VALGRIND EM CADA CASO:
+ - Pasta main / Caso 1:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 10:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 2:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 3:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 4:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 5:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 6:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 7:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/7/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 8:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/8/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta main / Caso 9:
+ - Arquivo de output gerado: Resultados/Manuelly/main/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Nota para a pasta main (máximo 7.0) - 0 de 100 - 0% de 7.0: 0.
+ -----
+ - Pasta completo / Caso 1:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 10:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 2:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 3:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 4:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 5:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 6:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 7:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/7/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 8:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/8/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta completo / Caso 9:
+ - Arquivo de output gerado: Resultados/Manuelly/completo/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 0, frees: 0, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 0% (desconto do valgrind) = 0 de 10 pontos.
+ - Nota para a pasta completo (máximo 0) - 0 de 100 - 0% de 0: 0.
+ -----
+ - Pasta jogador / Caso 1:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 62, frees: 62, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 10:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 62, frees: 62, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 2:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 110, frees: 110, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 3:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 92, frees: 92, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 4:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 75, frees: 75, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 5:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 99, frees: 99, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 6:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 36, frees: 36, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 7:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/7/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 24, frees: 24, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 8:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/8/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 116, frees: 116, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta jogador / Caso 9:
+ - Arquivo de output gerado: Resultados/Manuelly/jogador/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 285, frees: 285, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta jogador (máximo 1.5) - 100.00 de 100 - 100.00% de 1.5: 1.50.
+ -----
+ - Pasta mapa / Caso 1:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 10:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 2:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 3:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 4:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 5:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 6:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 7:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 8:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Pasta mapa / Caso 9:
+ - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Resultado para o saida.txt: Incorreto! Peso: 0.0
+ - Nota para o Caso (soma dos pesos): 0 (soma total) - 30.0% (desconto do valgrind) = 0 de 10 pontos.
+ - Nota para a pasta mapa (máximo 0.5) - 0 de 100 - 0% de 0.5: 0.
+ -----
+ - Pasta celula / Caso 1:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 50, frees: 50, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 10:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 50, frees: 50, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 2:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 74, frees: 74, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 3:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 56, frees: 56, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 4:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 57, frees: 57, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 5:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 75, frees: 75, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 6:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 32, frees: 32, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 7:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/7/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 16, frees: 16, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 8:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/8/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 74, frees: 74, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta celula / Caso 9:
+ - Arquivo de output gerado: Resultados/Manuelly/celula/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 205, frees: 205, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta celula (máximo 0.5) - 100.00 de 100 - 100.00% de 0.5: .50.
+ -----
+ - Pasta acao_monstro / Caso 1:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/1/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 53, frees: 53, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 10:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 53, frees: 53, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 2:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/2/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 77, frees: 77, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 3:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/3/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 57, frees: 57, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 4:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/4/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 57, frees: 57, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 5:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/5/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 80, frees: 80, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 6:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/6/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 34, frees: 34, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 7:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/7/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 17, frees: 17, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 8:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/8/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 74, frees: 74, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta acao_monstro / Caso 9:
+ - Arquivo de output gerado: Resultados/Manuelly/acao_monstro/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 211, frees: 211, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta acao_monstro (máximo 0.5) - 100.00 de 100 - 100.00% de 0.5: .50.
+ -----
+
+#######################################
+RESULTADOS FINAIS
+#######################################
+
+----------------------------------------------------------------------------
+Aluno: Manuelly
+ - Arquivos Esperados Corretos: 9 de 9
+ - Pastas Compiladas Corretamente: 6 de 6 
+ - Pastas Linkadas Corretamente: 5 de 6
+ - Teste main
+ - Resultados corretos: 0 de 10
+ - Valgrinds corretos: 10 de 10
+ - Nota de Manuelly para o teste main: 0
+ - Teste completo
+ - Resultados corretos: 0 de 10
+ - Valgrinds corretos: 10 de 10
+ - Nota de Manuelly para o teste completo: 0
+ - Teste jogador
+ - Resultados corretos: 10 de 10
+ - Valgrinds corretos: 10 de 10
+ - Nota de Manuelly para o teste jogador: 1.50
+ - Teste mapa
+ - Resultados corretos: 0 de 10
+ - Valgrinds corretos: 0 de 10
+ - Nota de Manuelly para o teste mapa: 0
+ - Teste celula
+ - Resultados corretos: 10 de 10
+ - Valgrinds corretos: 10 de 10
+ - Nota de Manuelly para o teste celula: .50
+ - Teste acao_monstro
+ - Resultados corretos: 10 de 10
+ - Valgrinds corretos: 10 de 10
+ - Nota de Manuelly para o teste acao_monstro: .50
+ - Nota de Manuelly: 0+(1.50)+(.50)+(0)+(0)+(0)+(.50)
+ - Nota de Manuelly: 2.50
+
+----------------------------------------------------------------------------
+
+Arquivo CSV Resultado.csv com os resultados finais foi gerado na pasta raíz!
+
+
+

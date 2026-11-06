@@ -1,0 +1,32 @@
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o: na função "chegaNaCasa":
+main.c:(.text+0x80c): referência não definida para "obtemOcupanteMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x82d): referência não definida para "moveJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x86d): referência não definida para "recuaJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x883): referência não definida para "moveJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x8ac): referência não definida para "recuaJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o: na função "executaJogada":
+main.c:(.text+0x8d4): referência não definida para "obtemPosicaoFimMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x8f6): referência não definida para "retiraJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x931): referência não definida para "moveJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x965): referência não definida para "obtemCelulaMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x999): referência não definida para "recuaJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x9ca): referência não definida para "moveJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x9ea): referência não definida para "moveJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x9ff): referência não definida para "retiraJogadorMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o: na função "obtemVencedorJogo":
+main.c:(.text+0xa3f): referência não definida para "obtemPosicaoFimMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o: na função "imprimeEstadoJogo":
+main.c:(.text+0xc82): referência não definida para "imprimeCelulasMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o: na função "imprimeRelatorioJogo":
+main.c:(.text+0xe7c): referência não definida para "obtemQtdCelulasMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o: na função "leEntradaMapa":
+main.c:(.text+0xff1): referência não definida para "insereCelulaMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x1043): referência não definida para "insereCelulaMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x109b): referência não definida para "insereCelulaMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x10f3): referência não definida para "insereCelulaMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x114b): referência não definida para "insereCelulaMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o:main.c:(.text+0x11a7): mais referências não definidas para "insereCelulaMapa" seguir
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/mapa/main.o: na função "main":
+main.c:(.text+0x11e5): referência não definida para "criaMapa"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x1469): referência não definida para "desalocaMapa"
+collect2: error: ld returned 1 exit status
