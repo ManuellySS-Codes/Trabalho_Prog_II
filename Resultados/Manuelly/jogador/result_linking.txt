@@ -1,0 +1,48 @@
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/acao_monstro.o: na função "executaMonstro":
+acao_monstro.c:(.text+0xda): referência não definida para "obtemForcaJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: acao_monstro.c:(.text+0xfa): referência não definida para "adicionaXPJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: acao_monstro.c:(.text+0x106): referência não definida para "incrementaMonstrosDerrotadosJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/celula.o: na função "imprimeCelula":
+celula.c:(.text+0x160): referência não definida para "obtemNomeJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "executaOuro":
+main.c:(.text+0xab): referência não definida para "adicionaOuroJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "executaItem":
+main.c:(.text+0x73c): referência não definida para "obtemOuroJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x760): referência não definida para "adicionaOuroJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x775): referência não definida para "adicionaForcaJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "chegaNaCasa":
+main.c:(.text+0x847): referência não definida para "venceDisputaJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x857): referência não definida para "incrementaDisputasVencidasJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x896): referência não definida para "incrementaDisputasVencidasJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "executaJogada":
+main.c:(.text+0x8e3): referência não definida para "incrementaJogadasJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x902): referência não definida para "obtemPosicaoJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "obtemVencedorJogo":
+main.c:(.text+0xa6c): referência não definida para "obtemPosicaoJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "imprimeSituacao":
+main.c:(.text+0xb6f): referência não definida para "obtemNomeJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "imprimeEstadoJogo":
+main.c:(.text+0xc1c): referência não definida para "obtemPosicaoJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xc2c): referência não definida para "obtemNomeJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xca6): referência não definida para "obtemNomeJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xcdb): referência não definida para "printEstadoJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "imprimeRankingJogo":
+main.c:(.text+0xd2f): referência não definida para "copiaJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xd6e): referência não definida para "comparaOrdJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xdae): referência não definida para "printRankingJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "imprimeRelatorioJogo":
+main.c:(.text+0xe37): referência não definida para "obtemJogadasJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xe46): referência não definida para "obtemDisputasVencidasJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xe55): referência não definida para "obtemMonstrosDerrotadosJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0xf11): referência não definida para "printRelatorioJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/main.o: na função "main":
+main.c:(.text+0x11f3): referência não definida para "desalocaJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x1271): referência não definida para "leJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x1287): referência não definida para "obtemNomeJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x1298): referência não definida para "comparaNomeJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x12b7): referência não definida para "desalocaJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/mapa.o: na função "retiraJogadorMapa":
+mapa.c:(.text+0x1a3): referência não definida para "obtemPosicaoJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/jogador/mapa.o: na função "moveJogadorMapa":
+mapa.c:(.text+0x21f): referência não definida para "definePosicaoJogador"
+collect2: error: ld returned 1 exit status

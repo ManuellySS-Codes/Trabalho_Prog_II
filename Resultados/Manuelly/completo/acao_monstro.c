@@ -1,4 +1,4 @@
-#include "mapa.h"
+/*#include "mapa.h"
 #include <math.h>
 #include <stdio.h>
 #include "celula.h"
@@ -49,3 +49,4 @@ void desalocaMonstro(void *dado){
     free(monstro->nome);
     free(monstro);
 }
+*/

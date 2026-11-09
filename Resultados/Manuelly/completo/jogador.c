@@ -1,4 +1,4 @@
-#include "mapa.h"
+/*#include "mapa.h"
 #include <math.h>
 #include <stdio.h>
 #include "celula.h"
@@ -181,4 +181,4 @@ void desalocaJogador(void *dado){
     free(jogador->nome);
     free(jogador->cor);
     free(jogador);
-}
+}*/

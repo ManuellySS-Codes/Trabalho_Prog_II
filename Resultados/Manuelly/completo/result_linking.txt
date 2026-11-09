@@ -1,0 +1,19 @@
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/completo/mapa.o: na função "insereCelulaMapa":
+mapa.c:(.text+0xc6): referência não definida para "criaCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/completo/mapa.o: na função "obtemOcupanteMapa":
+mapa.c:(.text+0x182): referência não definida para "obtemOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/completo/mapa.o: na função "retiraJogadorMapa":
+mapa.c:(.text+0x1a4): referência não definida para "obtemPosicaoJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: mapa.c:(.text+0x1e0): referência não definida para "obtemOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: mapa.c:(.text+0x1f7): referência não definida para "defineOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/completo/mapa.o: na função "moveJogadorMapa":
+mapa.c:(.text+0x235): referência não definida para "definePosicaoJogador"
+/usr/bin/x86_64-linux-gnu-ld.bfd: mapa.c:(.text+0x275): referência não definida para "defineOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/completo/mapa.o: na função "recuaJogadorMapa":
+mapa.c:(.text+0x2c1): referência não definida para "estaOcupadaCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: mapa.c:(.text+0x30c): referência não definida para "estaOcupadaCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/completo/mapa.o: na função "imprimeCelulasMapa":
+mapa.c:(.text+0x3ae): referência não definida para "imprimeCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/completo/mapa.o: na função "desalocaMapa":
+mapa.c:(.text+0x422): referência não definida para "desalocaCelula"
+collect2: error: ld returned 1 exit status

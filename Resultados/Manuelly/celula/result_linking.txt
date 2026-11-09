@@ -1,0 +1,16 @@
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/celula/main.o: na função "executaJogada":
+main.c:(.text+0x977): referência não definida para "executaAcaoCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/celula/mapa.o: na função "insereCelulaMapa":
+mapa.c:(.text+0x6a): referência não definida para "criaCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/celula/mapa.o: na função "obtemOcupanteMapa":
+mapa.c:(.text+0x181): referência não definida para "obtemOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/celula/mapa.o: na função "retiraJogadorMapa":
+mapa.c:(.text+0x1ca): referência não definida para "obtemOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: mapa.c:(.text+0x1e1): referência não definida para "defineOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/celula/mapa.o: na função "moveJogadorMapa":
+mapa.c:(.text+0x24e): referência não definida para "defineOcupanteCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/celula/mapa.o: na função "imprimeCelulasMapa":
+mapa.c:(.text+0x2f9): referência não definida para "imprimeCelula"
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/celula/mapa.o: na função "desalocaMapa":
+mapa.c:(.text+0x345): referência não definida para "desalocaCelula"
+collect2: error: ld returned 1 exit status

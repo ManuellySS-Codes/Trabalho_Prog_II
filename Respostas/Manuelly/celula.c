@@ -1,4 +1,4 @@
-#include "mapa.h"
+/*#include "mapa.h"
 #include <math.h>
 #include <stdio.h>
 #include "celula.h"
@@ -68,4 +68,4 @@ void imprimeCelula(Celula *c, int posicao){
 void desalocaCelula(Celula *c){ 
     c->desaloca(c->acao);
     free(c);
-}
+}*/

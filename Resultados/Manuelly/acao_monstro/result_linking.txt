@@ -1,0 +1,6 @@
+/usr/bin/x86_64-linux-gnu-ld.bfd: Resultados/Manuelly/acao_monstro/main.o: na função "leEntradaMapa":
+main.c:(.text+0x1069): referência não definida para "leMonstro"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x107f): referência não definida para "desalocaMonstro"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x1089): referência não definida para "imprimeMonstro"
+/usr/bin/x86_64-linux-gnu-ld.bfd: main.c:(.text+0x1093): referência não definida para "executaMonstro"
+collect2: error: ld returned 1 exit status
