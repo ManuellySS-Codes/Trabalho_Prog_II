@@ -5,7 +5,6 @@
 
 /**
  * @brief Rola o dado com o algoritmo pseudoaleatorio e retorna o numero do dado
- * @param dado Ponteiro para dado
  */
 int RolaDado();
 

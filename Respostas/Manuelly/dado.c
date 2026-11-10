@@ -8,7 +8,6 @@
 #include "acao_monstro.h"
 #include "dado.h"
 
-//Nao sei como funciona a avaliacao pra um .h feito por mim
 static unsigned int semente = 2026;
 
 int RolaDado() {
