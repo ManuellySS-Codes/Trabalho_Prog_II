@@ -7,14 +7,13 @@ typedef struct Avanca Avanca;
 
 /**
  * @brief Aloca dinamicamente uma ação do tipo Avanco e guarda nela a quantidade de avancos
- * @param n_celulas_avancadas Casas puladas no avanco do jogador
+ * @param tamanho_avanco_em_casas Casas a serem puladas no avanco do jogador
  * @return Ponteiro para o Avanco criado
  */
-Avanca *criaAvanco(int n_celulas_avancadas);
+Avanca *criaAvanco(int tamanho_avanco_em_casas);
 
 /**
- * @brief Lê da entrada padrão, na mesma linha, o nome, a força e a XP do Avanco (a palavra Avanco
- * já deve ter sido lida) e cria o Avanco com criaAvanco.
+ * @brief Lê da entrada padrão a quantidade de casas que esse avanco pula
  * @return Ponteiro para o Avanco criado
  */
 Avanca *leAvanco();
@@ -22,14 +21,14 @@ Avanca *leAvanco();
 /**
  * @brief Converte o dado genérico para Avanco e realiza a acao
  * @param dado Ponteiro genérico para o Avanco
- * @param j Jogador que parou na célula
+ * @param j Ponteior para jogador
  * @return Quantas casas o jogador deve avancar
  */
 int executaAvanco(void *dado, Jogador *j);
 
 /**
- * @brief Converte o dado genérico para Avanco e imprime, sem quebra de linha:
- * "AVANCA"
+ * @brief Converte o dado genérico para Avanca e imprime, sem quebra de linha:
+ * "AVANCA x" sendo x o numero de casas que o jogador ira avancar
  * @param dado Ponteiro genérico para o Avanco
  */
 void imprimeAvanco(void *dado);

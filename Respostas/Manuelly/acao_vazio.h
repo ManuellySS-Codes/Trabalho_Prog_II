@@ -12,7 +12,7 @@ typedef struct Vazio Vazio;
 Vazio *criaVazio();
 
 /**
- * @brief Lê da entrada padrão a quantiade de Vazio disposto na celula
+ * @brief Nao le nada da entrada padrao porque a palavra vazia jah foi lida
  * @return Ponteiro para o Vazio criado
  */
 Vazio *leVazio();
@@ -20,14 +20,14 @@ Vazio *leVazio();
 /**
  * @brief Converte o dado genérico para Vazio e realiza a acao
  * @param dado Ponteiro genérico para o Vazio
- * @param j Jogador que parou na célula
+ * @param j ponteiro para jogador
  * @return Quantas casas o jogador deve avancar
  */
 int executaVazio(void *dado, Jogador *j);
 
 /**
  * @brief Converte o dado genérico para Vazio e imprime, sem quebra de linha:
- * "AVANCA"
+ * "VAZIA"
  * @param dado Ponteiro genérico para o Vazio
  */
 void imprimeVazio(void *dado);

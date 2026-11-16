@@ -3,41 +3,41 @@
 
 #include "jogador.h"
 
-typedef struct VOLTA VOLTA;
+typedef struct Volta Volta;
 
 /**
- * @brief Aloca dinamicamente uma ação do tipo Avanco e guarda nela a quantidade de avancos
- * @param n_celulas_avancadas Casas puladas no avanco do jogador
- * @return Ponteiro para o Avanco criado
+ * @brief Aloca dinamicamente uma ação do tipo volta e guarda nela a quantidade de voltas
+ * @param tamanho_avanco_em_casas Casas puladas no volta do jogador
+ * @return Ponteiro para o volta criado
  */
-VOLTA *criaAvanco(int n_celulas_avancadas);
+Volta *criaVolta(int tamanho_avanco_em_casas);
 
 /**
- * @brief Lê da entrada padrão, na mesma linha, o nome, a força e a XP do Avanco (a palavra Avanco
- * já deve ter sido lida) e cria o Avanco com criaAvanco.
- * @return Ponteiro para o Avanco criado
+ * @brief Lê da entrada padrão, na mesma linha, o nome, a força e a XP do volta (a palavra volta
+ * já deve ter sido lida) e cria o volta com criavolta.
+ * @return Ponteiro para o volta criado
  */
-VOLTA *leAvanco();
+Volta *leVolta();
 
 /**
- * @brief Converte o dado genérico para Avanco e realiza a acao
- * @param dado Ponteiro genérico para o Avanco
- * @param j Jogador que parou na célula
- * @return Quantas casas o jogador deve avancar
+ * @brief Converte o dado genérico para volta e realiza a acao
+ * @param dado Ponteiro genérico para o volta
+ * @param j ponteiro para jogador
+ * @return O numero negativo de quantas casas o jogador deve voltar
  */
-int executaAvanco(void *dado, Jogador *j);
+int executaVolta(void *dado, Jogador * j);
 
 /**
- * @brief Converte o dado genérico para Avanco e imprime, sem quebra de linha:
- * "AVANCA"
- * @param dado Ponteiro genérico para o Avanco
+ * @brief Converte o dado genérico para volta e imprime, sem quebra de linha:
+ * "VOLTA x" x sendo o valor que o jogador deve voltar
+ * @param dado Ponteiro genérico para o volta
  */
-void imprimeAvanco(void *dado);
+void imprimeVolta(void *dado);
 
 /**
- * @brief Converte o dado genérico para avanco e libera a memória alocada para ele
- * @param dado Ponteiro genérico para o avanco
+ * @brief Converte o dado genérico para volta e libera a memória alocada para ele
+ * @param dado Ponteiro genérico para o volta
  */
-void desalocaAvanco(void *dado);
+void desalocaVolta(void *dado);
 
 #endif // _ACAO_VOLTA_H_

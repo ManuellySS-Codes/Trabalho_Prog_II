@@ -1,11 +1,12 @@
-/*#include "mapa.h"
+//essenciais
 #include <math.h>
 #include <stdio.h>
-#include "celula.h"
 #include <string.h>
 #include <stdlib.h>
+//gerais
 #include "jogador.h"
-#include "acao_monstro.h"
+#include "celula.h"
+#include "mapa.h"
 
 struct Jogador{
     char * nome;
@@ -181,4 +182,4 @@ void desalocaJogador(void *dado){
     free(jogador->nome);
     free(jogador->cor);
     free(jogador);
-}*/
+}

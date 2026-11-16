@@ -1,10 +1,12 @@
-#include "mapa.h"
+//essenciais
 #include <math.h>
 #include <stdio.h>
-#include "celula.h"
 #include <string.h>
 #include <stdlib.h>
+//gerais
 #include "jogador.h"
+#include "celula.h"
+#include "mapa.h"
 #include "acao_monstro.h"
 
 struct Mapa{
@@ -18,7 +20,6 @@ Mapa *criaMapa(){
     m->celulas = NULL; //cada celula sera alocada dinamicamente
     return m;
 }
-//comentar melhor as funcoes
 
 void insereCelulaMapa(Mapa *m, void *acao, func_ptr_executa executa, func_ptr_imprime imprime, func_ptr_desaloca desaloca){
     m->qtd_celulas++;
@@ -71,17 +72,17 @@ void moveJogadorMapa(Mapa *m, Jogador *j, int posicao){
     }
 }
 
-void recuaJogadorMapa(Mapa *m, Jogador *j, int origem){
-    int posicao_atual = origem - 1; //jogador comeca tentando recusar pra casa anterior a de origem
-    
-    while(posicao_atual > 0){
+void recuaJogadorMapa(Mapa *m, Jogador *j, int origem){ //comentar melhor
+    int posicao_atual = origem - 1; 
+
+    while(posicao_atual >= 0){
         if(!estaOcupadaCelula(m->celulas[posicao_atual])){
-            moveJogadorMapa(m, j, posicao_atual);
+            moveJogadorMapa(m, j, posicao_atual + 1); //indice 0 por exemplo eh a casa 1 do tabuleiro
             return;
         }
         posicao_atual--;
     }
-    moveJogadorMapa(m, j, 0); //jogador vai pra casa inicial se nao encontrou nenhuma desocupada na regra de recuo
+    moveJogadorMapa(m, j, 0); // Vai para o início se tudo estiver ocupado
 }
 
 void imprimeCelulasMapa(Mapa *m){

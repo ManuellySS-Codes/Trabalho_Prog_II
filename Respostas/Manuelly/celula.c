@@ -1,11 +1,12 @@
-/*#include "mapa.h"
+//essenciais
 #include <math.h>
 #include <stdio.h>
-#include "celula.h"
 #include <string.h>
 #include <stdlib.h>
+//gerais
 #include "jogador.h"
-#include "acao_monstro.h"
+#include "celula.h"
+#include "mapa.h"
 
 struct Celula{
     Jogador * ocupante;
@@ -41,7 +42,7 @@ Jogador *obtemOcupanteCelula(Celula *c){
     return c->ocupante;
 }
 
-void defineOcupanteCelula(Celula *c, Jogador *j){ //essa funcao tah gerando problema
+void defineOcupanteCelula(Celula *c, Jogador *j){
     c->ocupante = j;
 }
 
@@ -68,4 +69,4 @@ void imprimeCelula(Celula *c, int posicao){
 void desalocaCelula(Celula *c){ 
     c->desaloca(c->acao);
     free(c);
-}*/
+}

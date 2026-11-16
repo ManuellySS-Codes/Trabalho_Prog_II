@@ -1,10 +1,13 @@
-#include "mapa.h"
+//essenciais
 #include <math.h>
 #include <stdio.h>
-#include "celula.h"
 #include <string.h>
 #include <stdlib.h>
+//gerais
 #include "jogador.h"
+#include "celula.h"
+#include "mapa.h"
+//acoes
 #include "acao_monstro.h"
 
 struct Monstro{

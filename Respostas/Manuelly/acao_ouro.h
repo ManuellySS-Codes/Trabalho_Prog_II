@@ -6,7 +6,7 @@
 typedef struct Ouro Ouro;
 
 /**
- * @brief Aloca dinamicamente uma ação do tipo Ouro e guarda nela a quantidade de Ouros
+ * @brief Aloca dinamicamente uma ação do tipo ouro e guarda nela a quantidade de ouro a ser ofertada pela celula
  * @param qtd_ouro quantidade de ouro presente na acao
  * @return Ponteiro para o Ouro criado
  */
@@ -28,7 +28,7 @@ int executaOuro(void *dado, Jogador *j);
 
 /**
  * @brief Converte o dado genérico para Ouro e imprime, sem quebra de linha:
- * "AVANCA"
+ * "OURO x" x sendo a quantidade de ouro ofertada
  * @param dado Ponteiro genérico para o Ouro
  */
 void imprimeOuro(void *dado);

@@ -1,11 +1,9 @@
-#include "mapa.h"
+//essenciais
 #include <math.h>
 #include <stdio.h>
-#include "celula.h"
 #include <string.h>
 #include <stdlib.h>
-#include "jogador.h"
-#include "acao_monstro.h"
+//dado
 #include "dado.h"
 
 static unsigned int semente = 2026;
