@@ -54,35 +54,36 @@ Jogador *obtemOcupanteMapa(Mapa *m, int posicao){
 
 void retiraJogadorMapa(Mapa *m, Jogador *j){
     int pos = obtemPosicaoJogador(j);
-    if (pos >= 1 && pos <= m->qtd_celulas) { //se a posicao for valida
+    if (pos >= 1 && pos <= m->qtd_celulas){ //verifica se a posicao do jogador estah dentro do vetor de celulas
         Celula * c = obtemCelulaMapa(m, pos); 
-        if(c != NULL && obtemOcupanteCelula(c) == j){ 
-            defineOcupanteCelula(c, NULL); //define que o ocupante eh nulo pra tirar ponteiro do jogador que tava lah
+        if(c != NULL && obtemOcupanteCelula(c) == j){  //verifica se o jogador do cabecalho que esta realmente ocupando a celula passada
+            defineOcupanteCelula(c, NULL); //define que o ocupante eh nulo pra tirar ponteiro do jogador que tava la
         }
     }
 }
 
 void moveJogadorMapa(Mapa *m, Jogador *j, int posicao){
     retiraJogadorMapa(m, j);
+
     definePosicaoJogador(j, posicao); //atualiza a posicao do jogador
     
-    if (posicao > 0 && posicao <= m->qtd_celulas) { //verificando se a casa tah dentro do vetor de celulas pra poder definir o ocupante da celula valida
+    if (posicao > 0 && posicao <= m->qtd_celulas) { //verifica se eh uma celula valida dentro do vetor de celulas antes de colocar o jogador na casa
         Celula *c = obtemCelulaMapa(m, posicao);
-        defineOcupanteCelula(c, j); //soh usa essa funcao se for dentro de uma celula valida dentro da celula inicio ou fim nao eh
+        defineOcupanteCelula(c, j);
     }
 }
 
-void recuaJogadorMapa(Mapa *m, Jogador *j, int origem){ //comentar melhor
-    int posicao_atual = origem - 1; 
+void recuaJogadorMapa(Mapa *m, Jogador *j, int origem){
+    int posicao_atual = origem - 1; //a primeira posicao a ser testada eh a anterior ah origem
 
     while(posicao_atual >= 0){
-        if(!estaOcupadaCelula(m->celulas[posicao_atual])){
-            moveJogadorMapa(m, j, posicao_atual + 1); //indice 0 por exemplo eh a casa 1 do tabuleiro
+        if(!estaOcupadaCelula(m->celulas[posicao_atual])){ //se a posicao nao esta ocupada move o jogador pra ela
+            moveJogadorMapa(m, j, posicao_atual + 1); //o posicao eh um indice para o vetor entao o +1 dah o numero certo da casa assim soh testo ateh a casa
             return;
         }
         posicao_atual--;
     }
-    moveJogadorMapa(m, j, 0); // Vai para o início se tudo estiver ocupado
+    moveJogadorMapa(m, j, 0); // Vai para o inicio se tudo estiver ocupado
 }
 
 void imprimeCelulasMapa(Mapa *m){

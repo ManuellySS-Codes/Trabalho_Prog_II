@@ -1,5 +1,4 @@
 //essenciais
-#include <math.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -21,30 +20,44 @@
 struct Jogo{
     Mapa*mapa;
     Jogador ** jogadores;
-    int qtd_jogadores, indice_proximo_jogador_na_fila_jogadas;
+    int qtd_jogadores, indice_proximo_jogador_na_fila_jogadas, acabou_jogo;
     char * situacao_atual;
 };
 
 //--------------------------------------------------------------- ALOCACAO -----------------------------------------------------------------------------------------
 Jogo* CriaJogo(){
+    int max_tamanho_situacao_atual = 50;
+
     Jogo * jogo = (Jogo*) calloc(1, sizeof(Jogo));
+    
+    if(jogo == NULL){
+        printf("Nao foi possivel alocar memoria para o tipo complexo Jogo. O programa será encerrado!\n");
+        exit(0);
+    }
+
     jogo->mapa = criaMapa();
-    jogo->jogadores = NULL;
-    jogo->situacao_atual = (char*) calloc(30, sizeof(char));
+    jogo->jogadores = NULL; //comeca nulo pois o vetor de jogadores preenchido a partir de realocacao
+    jogo->situacao_atual = (char*) calloc(max_tamanho_situacao_atual, sizeof(char));
     jogo->indice_proximo_jogador_na_fila_jogadas =0;
-    strcpy(jogo->situacao_atual, "EM ANDAMENTO");
+    jogo->acabou_jogo =0;
+    strcpy(jogo->situacao_atual, "EM ANDAMENTO"); //inicialmente a situacao atual serah em andamento e soh mudara quando houver um vencedor
+
     return jogo;
 }
 
 //---------------------------------------------------------------- LEITURAS -------------------------------------------------------------------------------------------
 Jogo * LeCelulas(Jogo * jogo){
-char tipo_celula[10];
-    char lixo[20];
+    char tipo_celula[10]; //Os tipos sao Vazia Ouro Item Monstro Avanca e Volta
+    char lixo[20]; //guarda as string de inicio e fim do mapa
 
     scanf("%s %s", lixo, lixo);
 
     while(1){
-        if(scanf(" %9s", tipo_celula) != 1) break;
+
+        if(scanf(" %9s", tipo_celula) != 1){
+            printf("Os tipos acabaram antes da celulah fim ser detectada.\n");
+            break;
+        }
         
         if(!strcmp(tipo_celula, "VAZIA")){
             insereCelulaMapa(jogo->mapa, leVazio(), executaVazio, imprimeVazio, desalocaVazio);
@@ -69,23 +82,27 @@ char tipo_celula[10];
 
 //---------------------------------------------------------------------- JOGADAS ------------------------------------------------------------------------------
 Jogo* RealizaJogo(Jogo* jogo){
-    char comando[15];
+    char comando[15]; //os comando sao J E ROLAGEM ESTADO RANKING RELATORIO
     int n_rolagens = 0;
     int flag_jogador_repetido = 0;
 
-    jogo = LeCelulas(jogo);
+    jogo = LeCelulas(jogo); //Antes de ler os comandos do jogo le as celulas que compoem o mapa
 
     while(scanf(" %s", comando) == 1){
+
         if(!strcmp(comando, "J")){
+
             flag_jogador_repetido = 0;
+
             Jogador * jogador_novo = leJogador();
-            for(int i = 0; i < jogo->qtd_jogadores; i++){
+
+            for(int i = 0; i < jogo->qtd_jogadores; i++){ //jogadores com nomes iguais nao podem ser cadastrados
                 if(comparaNomeJogador(jogo->jogadores[i], obtemNomeJogador(jogador_novo))){
-                    //printf("NOME REPETIDO:%s\n", obtemNomeJogador(jogador_novo));
                     flag_jogador_repetido = 1;
                     break;
                 }
             }
+
             if(flag_jogador_repetido == 0){
                 jogo->jogadores = (Jogador**) realloc(jogo->jogadores, (jogo->qtd_jogadores+1) * sizeof(Jogador*));
                 jogo->jogadores[jogo->qtd_jogadores] = jogador_novo;
@@ -93,15 +110,24 @@ Jogo* RealizaJogo(Jogo* jogo){
             }else{
                 desalocaJogador(jogador_novo);
             }
+
         }else if(!strcmp(comando, "ROLAGEM")){
+
             scanf("%d", &n_rolagens);
             jogo = RealizaSequenciaDeRolagens(jogo, n_rolagens);
+
         }else if(!strcmp(comando, "ESTADO")){
+
             ImprimeEstadoCompleto(jogo);
+
         }else if(!strcmp(comando, "RANKING")){
+
             ImprimeRankingCompleto(jogo);
+
         }else if(!strcmp(comando, "RELATORIO")){
+
             ImprimeRelatorioCompleto(jogo);
+
         }else if(!strcmp(comando, "E")){
             //O E vem acompanhado de outro comando
             char subcomando[15];
@@ -116,12 +142,15 @@ Jogo* RealizaJogo(Jogo* jogo){
             }else if(!strcmp(subcomando, "RELATORIO")){
                 ImprimeRelatorioCompleto(jogo);
             }
+
         }else if(!strcmp(comando, "F")){
+            jogo->acabou_jogo = 1;
             jogo = VerificaSituacaoDoJogo(jogo);
             break;
         }
         
         jogo = VerificaSituacaoDoJogo(jogo);
+
     }
     return jogo;
 }
@@ -130,14 +159,18 @@ Jogo* VerificaSituacaoDoJogo(Jogo * jogo){
     if(AlguemVenceu(jogo) != NULL) {
         sprintf(jogo->situacao_atual, "VENCEDOR %s", obtemNomeJogador(AlguemVenceu(jogo)));
     }else{
-        strcpy(jogo->situacao_atual, "EM ANDAMENTO");
+        if(jogo->acabou_jogo == 0){
+            strcpy(jogo->situacao_atual, "EM ANDAMENTO");
+        }else{
+            strcpy(jogo->situacao_atual, "SEM VENCEDOR");
+        }
     }
     return jogo;
 }
 
 Jogador* AlguemVenceu(Jogo * jogo){
     for(int i=0; i<jogo->qtd_jogadores; i++){
-        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){
+        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){ //se alguem chegar a posicao fim do mapa eh porque ganhou
             return jogo->jogadores[i];
         }
     }
@@ -145,9 +178,10 @@ Jogador* AlguemVenceu(Jogo * jogo){
 }
 
 Jogo * RealizaSequenciaDeRolagens(Jogo * jogo, int qtd_rolagens){
-int avanco_dado = 0;
+    int avanco_dado = 0;
 
     if (jogo->qtd_jogadores <= 0 || jogo->jogadores == NULL) {
+        printf("Nao ha jogadores. Nao eh possivel realizar jogadas\n");
         return jogo;
     }
 
@@ -319,6 +353,7 @@ void ImprimeEstadoCompleto(Jogo * jogo){
     printf("=========== ESTADO ============\n");
 
     printf("[INICIO]");
+
     for(int i=0; i<jogo->qtd_jogadores; i++){
         if(obtemPosicaoJogador(jogo->jogadores[i]) ==0){
             if(printados == 0){
@@ -329,6 +364,7 @@ void ImprimeEstadoCompleto(Jogo * jogo){
             }
         }
     }
+    
     printf("\n");
 
     for(int i=1; i<=obtemQtdCelulasMapa(jogo->mapa); i++){

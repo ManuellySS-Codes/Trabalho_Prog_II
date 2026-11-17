@@ -2,11 +2,13 @@
 #define _ACAO_ITEM_H_
 
 #include "jogador.h"
+
 #define MAX_NOME_ITEM 21
+
 typedef struct Item Item;
 
 /**
- * @brief Aloca dinamicamente uma ação do tipo Item e guarda nela a quantidade de Item a ser ofertada pela celula
+ * @brief Aloca dinamicamente uma ação do tipo item e guarda nela os dados do item
  * @param nome nome do item a ser alocado
  * @param preco preco do item a ser alocado
  * @param bonus bonus que o item a ser alocado fornece para o jogador acrescentando em sua forca

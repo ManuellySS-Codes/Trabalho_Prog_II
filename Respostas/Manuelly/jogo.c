@@ -1,5 +1,4 @@
 //essenciais
-#include <math.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -17,11 +16,11 @@
 #include "acao_volta.h"
 #include "acao_ouro.h"
 #include "acao_item.h"
-//PENSAR EM CASOS EM QUE AS JOGADAS ACABARAM MAS NAO TEM UM VENCEDOR PRA IMPRIMIR SEM VENCEDOR
+
 struct Jogo{
     Mapa*mapa;
     Jogador ** jogadores;
-    int qtd_jogadores, indice_proximo_jogador_na_fila_jogadas;
+    int qtd_jogadores, indice_proximo_jogador_na_fila_jogadas, acabou_jogo;
     char * situacao_atual;
 };
 
@@ -40,6 +39,7 @@ Jogo* CriaJogo(){
     jogo->jogadores = NULL; //comeca nulo pois o vetor de jogadores preenchido a partir de realocacao
     jogo->situacao_atual = (char*) calloc(max_tamanho_situacao_atual, sizeof(char));
     jogo->indice_proximo_jogador_na_fila_jogadas =0;
+    jogo->acabou_jogo =0;
     strcpy(jogo->situacao_atual, "EM ANDAMENTO"); //inicialmente a situacao atual serah em andamento e soh mudara quando houver um vencedor
 
     return jogo;
@@ -144,10 +144,9 @@ Jogo* RealizaJogo(Jogo* jogo){
             }
 
         }else if(!strcmp(comando, "F")){
-
+            jogo->acabou_jogo = 1;
             jogo = VerificaSituacaoDoJogo(jogo);
             break;
-
         }
         
         jogo = VerificaSituacaoDoJogo(jogo);
@@ -160,14 +159,18 @@ Jogo* VerificaSituacaoDoJogo(Jogo * jogo){
     if(AlguemVenceu(jogo) != NULL) {
         sprintf(jogo->situacao_atual, "VENCEDOR %s", obtemNomeJogador(AlguemVenceu(jogo)));
     }else{
-        strcpy(jogo->situacao_atual, "EM ANDAMENTO");
+        if(jogo->acabou_jogo == 0){
+            strcpy(jogo->situacao_atual, "EM ANDAMENTO");
+        }else{
+            strcpy(jogo->situacao_atual, "SEM VENCEDOR");
+        }
     }
     return jogo;
 }
 
 Jogador* AlguemVenceu(Jogo * jogo){
     for(int i=0; i<jogo->qtd_jogadores; i++){
-        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){
+        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){ //se alguem chegar a posicao fim do mapa eh porque ganhou
             return jogo->jogadores[i];
         }
     }
@@ -175,9 +178,10 @@ Jogador* AlguemVenceu(Jogo * jogo){
 }
 
 Jogo * RealizaSequenciaDeRolagens(Jogo * jogo, int qtd_rolagens){
-int avanco_dado = 0;
+    int avanco_dado = 0;
 
     if (jogo->qtd_jogadores <= 0 || jogo->jogadores == NULL) {
+        printf("Nao ha jogadores. Nao eh possivel realizar jogadas\n");
         return jogo;
     }
 
@@ -349,6 +353,7 @@ void ImprimeEstadoCompleto(Jogo * jogo){
     printf("=========== ESTADO ============\n");
 
     printf("[INICIO]");
+
     for(int i=0; i<jogo->qtd_jogadores; i++){
         if(obtemPosicaoJogador(jogo->jogadores[i]) ==0){
             if(printados == 0){
@@ -359,6 +364,7 @@ void ImprimeEstadoCompleto(Jogo * jogo){
             }
         }
     }
+    
     printf("\n");
 
     for(int i=1; i<=obtemQtdCelulasMapa(jogo->mapa); i++){

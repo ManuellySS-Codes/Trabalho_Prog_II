@@ -15,9 +15,9 @@ struct Ouro{
 };
 
 Ouro *criaOuro(int qtd_ouro){
-    Ouro * avanco = (Ouro*) calloc(1, sizeof(Ouro));
-    avanco->quantidade_de_ouro = qtd_ouro;
-    return avanco;
+    Ouro * ouro = (Ouro*) calloc(1, sizeof(Ouro));
+    ouro->quantidade_de_ouro = qtd_ouro;
+    return ouro;
 }
 
 Ouro *leOuro(){
