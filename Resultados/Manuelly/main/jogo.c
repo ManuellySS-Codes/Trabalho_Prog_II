@@ -1,21 +1,23 @@
-//essenciais
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-//jogo e jogadas
-#include "jogo.h"
-#include "dado.h"
-//gerais
-#include "jogador.h"
-#include "celula.h"
-#include "mapa.h"
-//acoes
-#include "acao_monstro.h"
-#include "acao_avanca.h"
-#include "acao_vazio.h"
-#include "acao_volta.h"
-#include "acao_ouro.h"
-#include "acao_item.h"
+//-------------------------------------------------------------- BIBLIOTECAS ------------------------------------------------------------------------------------------------------------    
+    //Essenciais
+    #include <stdio.h>
+    #include <string.h>
+    #include <stdlib.h>
+    #include <math.h>
+    //Jogo e jogadas
+    #include "jogo.h"
+    #include "dado.h"
+    //Gerais
+    #include "jogador.h"
+    #include "celula.h"
+    #include "mapa.h"
+    //Acoes
+    #include "acao_monstro.h"
+    #include "acao_avanca.h"
+    #include "acao_vazio.h"
+    #include "acao_volta.h"
+    #include "acao_ouro.h"
+    #include "acao_item.h"
 
 struct Jogo{
     Mapa*mapa;
@@ -24,7 +26,7 @@ struct Jogo{
     char * situacao_atual;
 };
 
-//--------------------------------------------------------------- ALOCACAO -----------------------------------------------------------------------------------------
+//--------------------------------------------------------------- ALOCACAO ----------------------------------------------------------------------------------------------------------------
 Jogo* CriaJogo(){
     int max_tamanho_situacao_atual = 50;
 
@@ -45,7 +47,7 @@ Jogo* CriaJogo(){
     return jogo;
 }
 
-//---------------------------------------------------------------- LEITURAS -------------------------------------------------------------------------------------------
+//--------------------------------------------------------------- LEITURAS -------------------------------------------------------------------------------------------
 Jogo * LeCelulas(Jogo * jogo){
     char tipo_celula[10]; //Os tipos sao Vazia Ouro Item Monstro Avanca e Volta
     char lixo[20]; //guarda as string de inicio e fim do mapa
@@ -80,30 +82,18 @@ Jogo * LeCelulas(Jogo * jogo){
    return jogo;
 }
 
-//---------------------------------------------------------------------- JOGADAS ------------------------------------------------------------------------------
+//--------------------------------------------------------------- JOGADAS ------------------------------------------------------------------------------
 Jogo* RealizaJogo(Jogo* jogo){
-    char comando[15]; //os comando sao J E ROLAGEM ESTADO RANKING RELATORIO
+    char comando[20]; 
     int n_rolagens = 0;
-    int flag_jogador_repetido = 0;
 
-    jogo = LeCelulas(jogo); //Antes de ler os comandos do jogo le as celulas que compoem o mapa
+    jogo = LeCelulas(jogo); 
 
     while(scanf(" %s", comando) == 1){
 
         if(!strcmp(comando, "J")){
-
-            flag_jogador_repetido = 0;
-
             Jogador * jogador_novo = leJogador();
-
-            for(int i = 0; i < jogo->qtd_jogadores; i++){ //jogadores com nomes iguais nao podem ser cadastrados
-                if(comparaNomeJogador(jogo->jogadores[i], obtemNomeJogador(jogador_novo))){
-                    flag_jogador_repetido = 1;
-                    break;
-                }
-            }
-
-            if(flag_jogador_repetido == 0){
+            if(!VerificaSeEhMesmoJogador(jogo, jogador_novo)){
                 jogo->jogadores = (Jogador**) realloc(jogo->jogadores, (jogo->qtd_jogadores+1) * sizeof(Jogador*));
                 jogo->jogadores[jogo->qtd_jogadores] = jogador_novo;
                 jogo->qtd_jogadores++;
@@ -153,28 +143,6 @@ Jogo* RealizaJogo(Jogo* jogo){
 
     }
     return jogo;
-}
-
-Jogo* VerificaSituacaoDoJogo(Jogo * jogo){
-    if(AlguemVenceu(jogo) != NULL) {
-        sprintf(jogo->situacao_atual, "VENCEDOR %s", obtemNomeJogador(AlguemVenceu(jogo)));
-    }else{
-        if(jogo->acabou_jogo == 0){
-            strcpy(jogo->situacao_atual, "EM ANDAMENTO");
-        }else{
-            strcpy(jogo->situacao_atual, "SEM VENCEDOR");
-        }
-    }
-    return jogo;
-}
-
-Jogador* AlguemVenceu(Jogo * jogo){
-    for(int i=0; i<jogo->qtd_jogadores; i++){
-        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){ //se alguem chegar a posicao fim do mapa eh porque ganhou
-            return jogo->jogadores[i];
-        }
-    }
-    return NULL;
 }
 
 Jogo * RealizaSequenciaDeRolagens(Jogo * jogo, int qtd_rolagens){
@@ -288,7 +256,40 @@ if(estaOcupadaCelula(celula_cobicada)){
     return jogo;
 }
 
-//---------------------------------------------------------------------- IMPRESSOES --------------------------------------------------------------------------
+//-------------------------------------------------------------- VERIFICACOES --------------------------------------------------------------------------
+
+Jogo* VerificaSituacaoDoJogo(Jogo * jogo){
+    if(AlguemVenceu(jogo) != NULL) {
+        sprintf(jogo->situacao_atual, "VENCEDOR %s", obtemNomeJogador(AlguemVenceu(jogo)));
+    }else{
+        if(jogo->acabou_jogo == 0){
+            strcpy(jogo->situacao_atual, "EM ANDAMENTO");
+        }else{
+            strcpy(jogo->situacao_atual, "SEM VENCEDOR");
+        }
+    }
+    return jogo;
+}
+
+Jogador* AlguemVenceu(Jogo * jogo){
+    for(int i=0; i<jogo->qtd_jogadores; i++){
+        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){ //se alguem chegar a posicao fim do mapa eh porque ganhou
+            return jogo->jogadores[i];
+        }
+    }
+    return NULL;
+}
+
+int VerificaSeEhMesmoJogador(Jogo * jogo, Jogador * jogador_novo){
+    for(int i = 0; i < jogo->qtd_jogadores; i++){ //jogadores com nomes iguais nao podem ser cadastrados
+        if(comparaNomeJogador(jogo->jogadores[i], obtemNomeJogador(jogador_novo))){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+//-------------------------------------------------------------- IMPRESSOES --------------------------------------------------------------------------
 
 void OrdenaJogadoresParaExibicao(Jogo * jogo, int * indices_ordenados){
     int aux=0;
@@ -387,7 +388,7 @@ void ImprimeEstadoCompleto(Jogo * jogo){
     printf("-------------------------------\n");
 
 
-    for(int i =0; i < jogo->qtd_jogadores; i++){
+    for(int i = 0; i < jogo->qtd_jogadores; i++){
         printEstadoJogador(jogo->jogadores[i]);
     }
 
@@ -397,7 +398,7 @@ void ImprimeEstadoCompleto(Jogo * jogo){
 
 }
 
-//---------------------------------------------------------------- DESALOCACAO ----------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------- DESALOCACAO ----------------------------------------------------------------------------------------------------
 void DestroiJogo(Jogo * jogo){
     free(jogo->situacao_atual);
     for(int i=0; i<jogo->qtd_jogadores; i++){

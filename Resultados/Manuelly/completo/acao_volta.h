@@ -13,7 +13,7 @@ typedef struct Volta Volta;
 Volta *criaVolta(int tamanho_avanco_em_casas);
 
 /**
- * @brief Lê da entrada padrão, na mesma linha, o nome, a força e a XP do volta (a palavra volta
+ * @brief Le da entrada padrão, na mesma linha, o nome, a força e a XP do volta (a palavra volta
  * já deve ter sido lida) e cria o volta com criavolta.
  * @return Ponteiro para o volta criado
  */
@@ -35,7 +35,7 @@ int executaVolta(void *dado, Jogador * j);
 void imprimeVolta(void *dado);
 
 /**
- * @brief Converte o dado genérico para volta e libera a memória alocada para ele
+ * @brief Converte o dado genérico para volta e libera a memoria alocada para ele
  * @param dado Ponteiro genérico para o volta
  */
 void desalocaVolta(void *dado);

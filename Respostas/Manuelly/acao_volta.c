@@ -15,9 +15,9 @@ struct Volta{
 };
 
 Volta *criaVolta(int tamanho_avanco_em_casas){
-    Volta * avanco = (Volta*) calloc(1, sizeof(Volta));
-    avanco->tamanho_avanco_em_casas = tamanho_avanco_em_casas;
-    return avanco;
+    Volta * volta = (Volta*) calloc(1, sizeof(Volta));
+    volta->tamanho_avanco_em_casas = tamanho_avanco_em_casas;
+    return volta;
 }
 
 Volta *leVolta(){

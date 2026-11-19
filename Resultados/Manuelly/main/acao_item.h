@@ -17,29 +17,29 @@ typedef struct Item Item;
 Item *criaItem(char * nome, int preco, int bonus);
 
 /**
- * @brief Lê da entrada padrão o item no formato <nome> <preco> <bonus>
+ * @brief Le da entrada padrao o item no formato <nome> <preco> <bonus>
  * @return Ponteiro para o Item criado
  */
 Item *leItem();
 
 /**
- * @brief Converte o dado genérico para Item e realiza a acao
- * @param dado Ponteiro genérico para o Item
+ * @brief Converte o dado generico para Item e realiza a acao
+ * @param dado Ponteiro generico para o Item
  * @param j Jogador que parou na célula
  * @return Quantas casas o jogador deve avancar
  */
 int executaItem(void *dado, Jogador *j);
 
 /**
- * @brief Converte o dado genérico para Item e imprime, sem quebra de linha:
+ * @brief Converte o dado generico para Item e imprime, sem quebra de linha:
  * "Item <nome> (p: <preco> f +<bonus>)"
- * @param dado Ponteiro genérico para o Item
+ * @param dado Ponteiro generico para o Item
  */
 void imprimeItem(void *dado);
 
 /**
- * @brief Converte o dado genérico para Item e libera a memória alocada para ele
- * @param dado Ponteiro genérico para o Item
+ * @brief Converte o dado generico para Item e libera a memoria alocada para ele
+ * @param dado Ponteiro generico para o Item
  */
 void desalocaItem(void *dado);
 

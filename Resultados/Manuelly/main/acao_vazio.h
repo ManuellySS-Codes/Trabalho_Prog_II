@@ -18,22 +18,22 @@ Vazio *criaVazio();
 Vazio *leVazio();
 
 /**
- * @brief Converte o dado genérico para Vazio e realiza a acao
- * @param dado Ponteiro genérico para o Vazio
+ * @brief Converte o dado generico para Vazio e realiza a acao
+ * @param dado Ponteiro generico para o Vazio
  * @param j ponteiro para jogador
  * @return Quantas casas o jogador deve avancar
  */
 int executaVazio(void *dado, Jogador *j);
 
 /**
- * @brief Converte o dado genérico para Vazio e imprime, sem quebra de linha:
+ * @brief Converte o dado generico para Vazio e imprime, sem quebra de linha
  * "VAZIA"
- * @param dado Ponteiro genérico para o Vazio
+ * @param dado Ponteiro generico para o Vazio
  */
 void imprimeVazio(void *dado);
 
 /**
- * @brief Converte o dado genérico para Vazio e libera a memória alocada para ele
+ * @brief Converte o dado genérico para Vazio e libera a memoria alocada para ele
  * @param dado Ponteiro genérico para o Vazio
  */
 void desalocaVazio(void *dado);

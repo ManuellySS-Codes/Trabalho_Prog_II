@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-//jogo e jogadas
+//jogo
 #include "jogo.h"
 
 int main(){

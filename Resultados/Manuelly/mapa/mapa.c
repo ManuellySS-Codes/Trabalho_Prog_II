@@ -10,14 +10,14 @@
 #include "acao_monstro.h"
 
 struct Mapa{
-    int qtd_celulas; // Quantidade de células informadas (N)
-    Celula **celulas; // Vetor de tamanho N (índices de 0 a N-1 para as casas 1 a N)
+    int qtd_celulas; // Quantidade de celulas informadas n
+    Celula **celulas; // Vetor de tamanho N casas 1 a n
 };
 
 Mapa *criaMapa(){
     Mapa *m = (Mapa*) calloc(1, sizeof(Mapa));
     m->qtd_celulas = 0;
-    m->celulas = NULL; //cada celula sera alocada dinamicamente
+    m->celulas = NULL;
     return m;
 }
 
@@ -33,13 +33,13 @@ int obtemQtdCelulasMapa(Mapa *m){
 }
 
 int obtemPosicaoFimMapa(Mapa *m){
-    return m->qtd_celulas + 1; // Fim eh N + 1
+    return m->qtd_celulas + 1; //soma n com 1
 }
 
 Celula *obtemCelulaMapa(Mapa *m, int posicao){
-    // Casas de 1 a N correspondem aos índices 0 a N-1 do vetor
+    // Casas de 1 a N correspondem aos indices 0 a n menos 1 do vetor
     if (posicao < 1 || posicao > m->qtd_celulas) {
-        return NULL; // Início (0), Fim ou inválidas retornam NULL
+        return NULL;
     }
     return m->celulas[posicao - 1]; 
 }
@@ -56,7 +56,7 @@ void retiraJogadorMapa(Mapa *m, Jogador *j){
     int pos = obtemPosicaoJogador(j);
     if (pos >= 1 && pos <= m->qtd_celulas){ //verifica se a posicao do jogador estah dentro do vetor de celulas
         Celula * c = obtemCelulaMapa(m, pos); 
-        if(c != NULL && obtemOcupanteCelula(c) == j){  //verifica se o jogador do cabecalho que esta realmente ocupando a celula passada
+        if(c != NULL && obtemOcupanteCelula(c) == j){ //verifica se o jogador do cabecalho que esta realmente ocupando a celula passada
             defineOcupanteCelula(c, NULL); //define que o ocupante eh nulo pra tirar ponteiro do jogador que tava la
         }
     }
@@ -78,7 +78,7 @@ void recuaJogadorMapa(Mapa *m, Jogador *j, int origem){
 
     while(posicao_atual >= 0){
         if(!estaOcupadaCelula(m->celulas[posicao_atual])){ //se a posicao nao esta ocupada move o jogador pra ela
-            moveJogadorMapa(m, j, posicao_atual + 1); //o posicao eh um indice para o vetor entao o +1 dah o numero certo da casa assim soh testo ateh a casa
+            moveJogadorMapa(m, j, posicao_atual + 1);
             return;
         }
         posicao_atual--;

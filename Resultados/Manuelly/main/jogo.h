@@ -50,6 +50,14 @@ Jogo* VerificaSituacaoDoJogo(Jogo * jogo);
 Jogador* AlguemVenceu(Jogo * jogo);
 
 /**
+ * @brief retorna 1 se houver algum jogador com o mesmo nome que o novo jogador
+ * @param jogo Ponteiro para o jogo
+ * @param novo_jogador ponteiro para o jogador a ser verificado
+ * @return retorna 1 se houver algum jogador com o mesmo nome que o novo jogador
+ */
+int VerificaSeEhMesmoJogador(Jogo * jogo, Jogador * jogador_novo);
+
+/**
  * @brief Organiza o vetor de indices com base na sequencia correta para exibir os jogadores em uma ordem baseada na funcao qsort do jogo
  * @param jogo Ponteiro para o jogo
  * @param indices_ordenados vetor de indices que sera organizado e utilizado para exibir o vetor de jogadores seguindo os criterios

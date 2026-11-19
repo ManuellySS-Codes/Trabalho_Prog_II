@@ -13,29 +13,29 @@ typedef struct Ouro Ouro;
 Ouro *criaOuro(int qtd_ouro);
 
 /**
- * @brief Lê da entrada padrão a quantiade de ouro disposto na celula
+ * @brief Le da entrada padrão a quantiade de ouro disposto na celula
  * @return Ponteiro para o Ouro criado
  */
 Ouro *leOuro();
 
 /**
- * @brief Converte o dado genérico para Ouro e realiza a acao
- * @param dado Ponteiro genérico para o Ouro
- * @param j Jogador que parou na célula
+ * @brief Converte o dado generico para Ouro e realiza a acao
+ * @param dado Ponteiro generico para o Ouro
+ * @param j Jogador que parou na celula
  * @return Quantas casas o jogador deve avancar
  */
 int executaOuro(void *dado, Jogador *j);
 
 /**
- * @brief Converte o dado genérico para Ouro e imprime, sem quebra de linha:
+ * @brief Converte o dado generico para Ouro e imprime, sem quebra de linha:
  * "OURO x" x sendo a quantidade de ouro ofertada
- * @param dado Ponteiro genérico para o Ouro
+ * @param dado Ponteiro generico para o Ouro
  */
 void imprimeOuro(void *dado);
 
 /**
- * @brief Converte o dado genérico para Ouro e libera a memória alocada para ele
- * @param dado Ponteiro genérico para o Ouro
+ * @brief Converte o dado generico para Ouro e libera a memoria alocada para ele
+ * @param dado Ponteiro generico para o Ouro
  */
 void desalocaOuro(void *dado);
 
