@@ -1,15 +1,15 @@
-==531879== Memcheck, a memory error detector
-==531879== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==531879== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==531879== Command: Resultados/Manuelly/celula/prog Resultados/Manuelly/celula/Casos/3
-==531879== Parent PID: 531878
-==531879== 
-==531879== 
-==531879== HEAP SUMMARY:
-==531879==     in use at exit: 0 bytes in 0 blocks
-==531879==   total heap usage: 56 allocs, 56 frees, 10,956 bytes allocated
-==531879== 
-==531879== All heap blocks were freed -- no leaks are possible
-==531879== 
-==531879== For lists of detected and suppressed errors, rerun with: -s
-==531879== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==18991== Memcheck, a memory error detector
+==18991== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==18991== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==18991== Command: Resultados/Manuelly/celula/prog Resultados/Manuelly/celula/Casos/3
+==18991== Parent PID: 18990
+==18991== 
+==18991== 
+==18991== HEAP SUMMARY:
+==18991==     in use at exit: 0 bytes in 0 blocks
+==18991==   total heap usage: 56 allocs, 56 frees, 10,956 bytes allocated
+==18991== 
+==18991== All heap blocks were freed -- no leaks are possible
+==18991== 
+==18991== For lists of detected and suppressed errors, rerun with: -s
+==18991== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

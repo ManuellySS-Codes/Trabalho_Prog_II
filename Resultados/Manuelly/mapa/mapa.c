@@ -10,8 +10,8 @@
 #include "acao_monstro.h"
 
 struct Mapa{
-    int qtd_celulas; // Quantidade de celulas informadas n
-    Celula **celulas; // Vetor de tamanho N casas 1 a n
+    int qtd_celulas; // quantidade de celulas n
+    Celula **celulas; //guarda casas entre o fim e o inicio
 };
 
 Mapa *criaMapa(){
@@ -33,11 +33,10 @@ int obtemQtdCelulasMapa(Mapa *m){
 }
 
 int obtemPosicaoFimMapa(Mapa *m){
-    return m->qtd_celulas + 1; //soma n com 1
+    return m->qtd_celulas + 1;
 }
 
 Celula *obtemCelulaMapa(Mapa *m, int posicao){
-    // Casas de 1 a N correspondem aos indices 0 a n menos 1 do vetor
     if (posicao < 1 || posicao > m->qtd_celulas) {
         return NULL;
     }
@@ -53,11 +52,11 @@ Jogador *obtemOcupanteMapa(Mapa *m, int posicao){
 }
 
 void retiraJogadorMapa(Mapa *m, Jogador *j){
-    int pos = obtemPosicaoJogador(j);
-    if (pos >= 1 && pos <= m->qtd_celulas){ //verifica se a posicao do jogador estah dentro do vetor de celulas
-        Celula * c = obtemCelulaMapa(m, pos); 
-        if(c != NULL && obtemOcupanteCelula(c) == j){ //verifica se o jogador do cabecalho que esta realmente ocupando a celula passada
-            defineOcupanteCelula(c, NULL); //define que o ocupante eh nulo pra tirar ponteiro do jogador que tava la
+    int posicao = obtemPosicaoJogador(j);
+    if (posicao >= 1 && posicao <= m->qtd_celulas){ //verifica se a posicao do jogador estah dentro do vetor de celulas
+        Celula * c = obtemCelulaMapa(m, posicao); 
+        if(c != NULL && obtemOcupanteCelula(c) == j){  //verifica se o jogador do cabecalho que esta realmente ocupando a celula passada
+            defineOcupanteCelula(c, NULL); //define que o ocupante eh nulo pra tirar ponteiro do jogador que tava lah
         }
     }
 }
@@ -74,14 +73,14 @@ void moveJogadorMapa(Mapa *m, Jogador *j, int posicao){
 }
 
 void recuaJogadorMapa(Mapa *m, Jogador *j, int origem){
-    int posicao_atual = origem - 1; //a primeira posicao a ser testada eh a anterior ah origem
+    int indice_atual = origem - 1; //a primeira posicao a ser testada eh a anterior ah origem
 
-    while(posicao_atual >= 0){
-        if(!estaOcupadaCelula(m->celulas[posicao_atual])){ //se a posicao nao esta ocupada move o jogador pra ela
-            moveJogadorMapa(m, j, posicao_atual + 1);
+    while(indice_atual >= 0){
+        if(!estaOcupadaCelula(m->celulas[indice_atual])){
+            moveJogadorMapa(m, j, indice_atual + 1);
             return;
         }
-        posicao_atual--;
+        indice_atual--;
     }
     moveJogadorMapa(m, j, 0); // Vai para o inicio se tudo estiver ocupado
 }

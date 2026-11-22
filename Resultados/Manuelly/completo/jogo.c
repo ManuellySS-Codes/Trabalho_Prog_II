@@ -38,7 +38,7 @@ Jogo* CriaJogo(){
     }
 
     jogo->mapa = criaMapa();
-    jogo->jogadores = NULL; //comeca nulo pois o vetor de jogadores preenchido a partir de realocacao
+    jogo->jogadores = NULL;
     jogo->situacao_atual = (char*) calloc(max_tamanho_situacao_atual, sizeof(char));
     jogo->indice_proximo_jogador_na_fila_jogadas =0;
     jogo->acabou_jogo =0;
@@ -49,7 +49,7 @@ Jogo* CriaJogo(){
 
 //--------------------------------------------------------------- LEITURAS -------------------------------------------------------------------------------------------
 Jogo * LeCelulas(Jogo * jogo){
-    char tipo_celula[10]; //Os tipos sao Vazia Ouro Item Monstro Avanca e Volta
+    char tipo_celula[10];
     char lixo[20]; //guarda as string de inicio e fim do mapa
 
     scanf("%s %s", lixo, lixo);
@@ -84,10 +84,10 @@ Jogo * LeCelulas(Jogo * jogo){
 
 //--------------------------------------------------------------- JOGADAS ------------------------------------------------------------------------------
 Jogo* RealizaJogo(Jogo* jogo){
-    char comando[20]; 
+    char comando[15];
     int n_rolagens = 0;
 
-    jogo = LeCelulas(jogo); 
+    jogo = LeCelulas(jogo);
 
     while(scanf(" %s", comando) == 1){
 
@@ -144,6 +144,7 @@ Jogo* RealizaJogo(Jogo* jogo){
     }
     return jogo;
 }
+
 
 Jogo * RealizaSequenciaDeRolagens(Jogo * jogo, int qtd_rolagens){
     int avanco_dado = 0;
@@ -398,7 +399,7 @@ void ImprimeEstadoCompleto(Jogo * jogo){
 
 }
 
-//-------------------------------------------------------------- DESALOCACAO ----------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------- DESALOCACAO ----------------------------------------------------------------------------------------------------
 void DestroiJogo(Jogo * jogo){
     free(jogo->situacao_atual);
     for(int i=0; i<jogo->qtd_jogadores; i++){
