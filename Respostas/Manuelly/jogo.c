@@ -193,21 +193,17 @@ Jogo * RealizaJogadas(Jogador * jogador, Jogo * jogo, int avanco_dado){
 
 if(estaOcupadaCelula(celula_cobicada)){
         Jogador * ocupante = obtemOcupanteCelula(celula_cobicada);
-        //printf("\nDESAFIANTE: %s OCUPANTE:%s\n", obtemNomeJogador(desafiante), obtemNomeJogador(ocupante));
-        //printEstadoJogador(desafiante);
-        //printEstadoJogador(ocupante);
+
         if(venceDisputaJogador(desafiante, ocupante)){
-            //printf("VENCEDOR: %s\n", obtemNomeJogador(desafiante));
-            retiraJogadorMapa(jogo->mapa, desafiante); //retirar o jogador antes de recuar o ocupante para que o ocupante nao tente recuar e veja a casa antiga como ocupada ainda (antes do movimento do jogador ser efetivo)
+            retiraJogadorMapa(jogo->mapa, desafiante); //retira o jogador antes de recuar o ocupante para que o ocupante nao tente recuar e veja a casa antiga como ocupada ainda (antes do movimento do jogador ser efetivo
             recuaJogadorMapa(jogo->mapa, ocupante, posicao_cobicada);
             moveJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
             incrementaDisputasVencidasJogador(desafiante);
             avanco_resultante_execucao_acao = executaAcaoCelula(celula_cobicada, desafiante); 
         }else{
-            //printf("VENCEDOR: %s\n", obtemNomeJogador(ocupante));
             incrementaDisputasVencidasJogador(ocupante);
             retiraJogadorMapa(jogo->mapa, desafiante); // Libera apenas a casa de origem do desafiante
-            recuaJogadorMapa(jogo->mapa, desafiante, posicao_cobicada); // Recua a partir da casa cobiçada
+            recuaJogadorMapa(jogo->mapa, desafiante, posicao_cobicada); // Recua a partir da casa cobicada
             return jogo;
         }
     }else{
@@ -231,24 +227,18 @@ if(estaOcupadaCelula(celula_cobicada)){
     
             if(estaOcupadaCelula(celula_pos_acao)){
                 Jogador * ocupante = obtemOcupanteCelula(celula_pos_acao);
-                //printf("\nDESAFIANTE: %s OCUPANTE:%s\n", obtemNomeJogador(desafiante), obtemNomeJogador(ocupante));
-                //printEstadoJogador(desafiante);
-                //printEstadoJogador(ocupante);
 
                 if(venceDisputaJogador(desafiante, ocupante)){
-                    //printf("VENCEDOR: %s\n", obtemNomeJogador(desafiante));
                     retiraJogadorMapa(jogo->mapa, desafiante);
                     recuaJogadorMapa(jogo->mapa, ocupante, posicao_cobicada);
                     moveJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
                     incrementaDisputasVencidasJogador(desafiante);
                 }else{
-                    //printf("VENCEDOR: %s\n", obtemNomeJogador(ocupante));
                     incrementaDisputasVencidasJogador(ocupante);
                     retiraJogadorMapa(jogo->mapa, desafiante); // Libera apenas a casa de origem do desafiante
                     recuaJogadorMapa(jogo->mapa, desafiante, posicao_cobicada); // Recua a partir da casa cobiçada
                     return jogo;
                 }
-
             }else{
                 moveJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
             }
