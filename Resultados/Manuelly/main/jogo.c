@@ -42,7 +42,7 @@ Jogo* CriaJogo(){
     jogo->situacao_atual = (char*) calloc(max_tamanho_situacao_atual, sizeof(char));
     jogo->indice_proximo_jogador_na_fila_jogadas =0;
     jogo->acabou_jogo =0;
-    strcpy(jogo->situacao_atual, "EM ANDAMENTO"); //inicialmente a situacao atual serah em andamento e soh mudara quando houver um vencedor
+    strcpy(jogo->situacao_atual, "EM ANDAMENTO");
 
     return jogo;
 }
@@ -50,7 +50,7 @@ Jogo* CriaJogo(){
 //--------------------------------------------------------------- LEITURAS -------------------------------------------------------------------------------------------
 Jogo * LeCelulas(Jogo * jogo){
     char tipo_celula[10];
-    char lixo[20]; //guarda as string de inicio e fim do mapa
+    char lixo[20];
 
     scanf("%s %s", lixo, lixo);
 
@@ -74,7 +74,7 @@ Jogo * LeCelulas(Jogo * jogo){
         }else if(!strcmp(tipo_celula, "VOLTA")){
             insereCelulaMapa(jogo->mapa, leVolta(), executaVolta, imprimeVolta, desalocaVolta);
         }else if(!strcmp(tipo_celula, "FIM")){
-            scanf("%s", lixo); // Le a palavra "MAPA" correspondente ao FIM
+            scanf("%s", lixo);
             break;
         }
     }
@@ -119,7 +119,6 @@ Jogo* RealizaJogo(Jogo* jogo){
             ImprimeRelatorioCompleto(jogo);
 
         }else if(!strcmp(comando, "E")){
-            //O E vem acompanhado de outro comando
             char subcomando[15];
             scanf(" %s", subcomando);
             if(!strcmp(subcomando, "ROLAGEM")){
@@ -193,21 +192,17 @@ Jogo * RealizaJogadas(Jogador * jogador, Jogo * jogo, int avanco_dado){
 
 if(estaOcupadaCelula(celula_cobicada)){
         Jogador * ocupante = obtemOcupanteCelula(celula_cobicada);
-        //printf("\nDESAFIANTE: %s OCUPANTE:%s\n", obtemNomeJogador(desafiante), obtemNomeJogador(ocupante));
-        //printEstadoJogador(desafiante);
-        //printEstadoJogador(ocupante);
+
         if(venceDisputaJogador(desafiante, ocupante)){
-            //printf("VENCEDOR: %s\n", obtemNomeJogador(desafiante));
-            retiraJogadorMapa(jogo->mapa, desafiante); //retirar o jogador antes de recuar o ocupante para que o ocupante nao tente recuar e veja a casa antiga como ocupada ainda (antes do movimento do jogador ser efetivo)
+            retiraJogadorMapa(jogo->mapa, desafiante);
             recuaJogadorMapa(jogo->mapa, ocupante, posicao_cobicada);
             moveJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
             incrementaDisputasVencidasJogador(desafiante);
             avanco_resultante_execucao_acao = executaAcaoCelula(celula_cobicada, desafiante); 
         }else{
-            //printf("VENCEDOR: %s\n", obtemNomeJogador(ocupante));
             incrementaDisputasVencidasJogador(ocupante);
-            retiraJogadorMapa(jogo->mapa, desafiante); // Libera apenas a casa de origem do desafiante
-            recuaJogadorMapa(jogo->mapa, desafiante, posicao_cobicada); // Recua a partir da casa cobiçada
+            retiraJogadorMapa(jogo->mapa, desafiante);
+            recuaJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
             return jogo;
         }
     }else{
@@ -231,24 +226,18 @@ if(estaOcupadaCelula(celula_cobicada)){
     
             if(estaOcupadaCelula(celula_pos_acao)){
                 Jogador * ocupante = obtemOcupanteCelula(celula_pos_acao);
-                //printf("\nDESAFIANTE: %s OCUPANTE:%s\n", obtemNomeJogador(desafiante), obtemNomeJogador(ocupante));
-                //printEstadoJogador(desafiante);
-                //printEstadoJogador(ocupante);
 
                 if(venceDisputaJogador(desafiante, ocupante)){
-                    //printf("VENCEDOR: %s\n", obtemNomeJogador(desafiante));
                     retiraJogadorMapa(jogo->mapa, desafiante);
                     recuaJogadorMapa(jogo->mapa, ocupante, posicao_cobicada);
                     moveJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
                     incrementaDisputasVencidasJogador(desafiante);
                 }else{
-                    //printf("VENCEDOR: %s\n", obtemNomeJogador(ocupante));
                     incrementaDisputasVencidasJogador(ocupante);
-                    retiraJogadorMapa(jogo->mapa, desafiante); // Libera apenas a casa de origem do desafiante
-                    recuaJogadorMapa(jogo->mapa, desafiante, posicao_cobicada); // Recua a partir da casa cobiçada
+                    retiraJogadorMapa(jogo->mapa, desafiante);
+                    recuaJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
                     return jogo;
                 }
-
             }else{
                 moveJogadorMapa(jogo->mapa, desafiante, posicao_cobicada);
             }
@@ -274,7 +263,7 @@ Jogo* VerificaSituacaoDoJogo(Jogo * jogo){
 
 Jogador* AlguemVenceu(Jogo * jogo){
     for(int i=0; i<jogo->qtd_jogadores; i++){
-        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){ //se alguem chegar a posicao fim do mapa eh porque ganhou
+        if(obtemPosicaoJogador(jogo->jogadores[i]) == obtemPosicaoFimMapa(jogo->mapa)){
             return jogo->jogadores[i];
         }
     }
@@ -282,7 +271,7 @@ Jogador* AlguemVenceu(Jogo * jogo){
 }
 
 int VerificaSeEhMesmoJogador(Jogo * jogo, Jogador * jogador_novo){
-    for(int i = 0; i < jogo->qtd_jogadores; i++){ //jogadores com nomes iguais nao podem ser cadastrados
+    for(int i = 0; i < jogo->qtd_jogadores; i++){
         if(comparaNomeJogador(jogo->jogadores[i], obtemNomeJogador(jogador_novo))){
             return 1;
         }

@@ -28,7 +28,7 @@ Volta *leVolta(){
 
 int executaVolta(void *dado, Jogador * j){
     Volta * volta = (Volta*) dado;
-    return (-(volta->tamanho_avanco_em_casas)); //avanco negativo porque eh para voltar casas
+    return (-(volta->tamanho_avanco_em_casas));
 }
 
 void imprimeVolta(void *dado){

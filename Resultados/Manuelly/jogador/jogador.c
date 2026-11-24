@@ -134,7 +134,7 @@ int obtemMonstrosDerrotadosJogador(Jogador *j){
     return j->monstros_derrotados;
 }
 
-void definePosicaoJogador(Jogador *j, int posicao){ //olhar no pdf se eh isso mesmo
+void definePosicaoJogador(Jogador *j, int posicao){
     j->posicao_atual = posicao;
 }
 
